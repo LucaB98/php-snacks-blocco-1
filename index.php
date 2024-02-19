@@ -39,8 +39,14 @@ $matchs = [
             <th>PH</th>
             <th>PG</th>
         </tr>
-        <?php foreach($matchs as $match) : ?>
-            <tr><?= $match ?></tr>
+        <?php foreach($matchs as $key => $match) : ?>
+            <tr>
+                <?php foreach($match as $squad) : ?>
+                  <td>
+                    <?= $squad ?>
+                  </td> 
+                <?php endforeach ?>   
+            </tr>
         <?php endforeach ?>
     </table>
 </body>
